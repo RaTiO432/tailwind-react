@@ -1,17 +1,10 @@
-
-import BMIcalc from './components/BMIcalc';
-// import Counting from './components/Counting';
-// import Useeffect from './components/Useeffect';
-
-
-
-
+import RoutesModule from "./Routes/RoutesModule";
+import Header from "./components/Header/Header";
 function App() {
   return (
    <>
-   {/* <Counting/> */}
-   {/* <Useeffect></Useeffect> */}
-   <BMIcalc/>
+   <Header/>
+   <RoutesModule/>
   
    </>
   );
