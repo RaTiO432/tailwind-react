@@ -4,6 +4,7 @@ import Counting from "../components/Counting"
 import Useeffect from "../components/Useeffect"
 import BMIcalc from '../components/BMIcalc'
 import PagenotFound from '../components/PagenotFound/PagenotFound'
+import Weather from '../components/Weather'
 
 const RoutesModule = () => {
   return (
@@ -12,6 +13,7 @@ const RoutesModule = () => {
         <Route path="/" element={<Counting />}/>
         <Route path="useeffect" element={<Useeffect />}/>
         <Route path="bmicalc" element={<BMIcalc />}/>
+        <Route path="weather" element={<Weather />}/>
         <Route path="*" element={<PagenotFound />}/>
      </Routes>
     </>

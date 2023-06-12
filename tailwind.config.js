@@ -21,6 +21,7 @@ module.exports = {
       "indigo-950": "#1e1b4b",
       "black": "#000",
       "red":"#FF0000",
+      "amber-600":"#d97706",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
