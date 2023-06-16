@@ -49,6 +49,7 @@ module.exports = {
     "50rem": "50rem",
     "70%": "70%",
     "28rem": "28rem",
+    "64rem": "64rem",
   },
   backgroundImage: {
     weather: "url('/src/Images/backgroudimage.webp')",
@@ -56,6 +57,15 @@ module.exports = {
   margin: {
     "30rem": "30rem",
     "24rem": "24rem",
+    "1rem": "1rem",
+    "5rem": "5rem",
+    "15rem": "15rem",
+    "10px": "10px",
+    "18rem": "18rem",
+  },
+  height: {
+    "35rem": "35rem",
+    "300vh":"300vh"
   },
 },
 
