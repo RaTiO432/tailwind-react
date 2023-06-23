@@ -5,10 +5,12 @@ const morgan = require("morgan");
 const os = require("os");
 const browser = require("browser-detect");
 const router = require("./Routes/routes");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors("*"));
 const port = 8082 || process.env.port;
 
 

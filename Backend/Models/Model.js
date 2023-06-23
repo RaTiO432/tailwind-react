@@ -55,16 +55,16 @@ const deleteUserModel = (params) => {
     console.log(error.message);
   }
 };
-const currentWeatherModel = async (params) => {
+const currentWeatherModel = async (queryParams) => {
   try {
     const data = await axios.get(
       config.weatherApi.url +
         "/current.json?key=" +
         config.weatherApi.key +
         "&q=" +
-        "Kolkata" +
+        queryParams.city +
         "&aqi=" +
-        "no"
+        queryParams.aqi
     );
         console.log(data.data);
     return data.data;
@@ -73,11 +73,33 @@ const currentWeatherModel = async (params) => {
     return error;
   }
 };
-
+const forecastWeatherModel = async (queryParams) => {
+  try {
+    const data = await axios.get(
+      config.weatherApi.url +
+        "/forecast.json?key=" +
+        config.weatherApi.key +
+        "&q=" +
+        queryParams.city +
+        "&days="+
+        queryParams.days+
+        "&aqi=" +
+        queryParams.aqi+
+        "&alerts="+
+        queryParams.alerts
+    );
+        console.log(data.data);
+    return data.data;
+  } catch (error) {
+    console.error(error.message);
+    return error;
+  }
+};
 module.exports = {
   getUserModel,
   addUserModel,
   editUserModel,
   deleteUserModel,
   currentWeatherModel,
+  forecastWeatherModel,
 };
