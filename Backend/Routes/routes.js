@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { getUser , addUser,editUser,deleteUser} = require("../Controller/Controller")
+const { getUser , addUser,editUser,deleteUser,currentWeather} = require("../Controller/Controller")
 const router = require("express").Router();
 
 //user display
@@ -14,6 +14,6 @@ router.put("/user",editUser);
 //user delete
 router.delete("/user",deleteUser)
 
-
+router.get("/currentweather",currentWeather)
 
 module.exports = router;

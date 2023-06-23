@@ -1,4 +1,5 @@
-const {getUserModel,addUserModel,editUserModel,deleteUserModel} = require("../Models/Model")
+const { request } = require("express");
+const {getUserModel,addUserModel,editUserModel,deleteUserModel,currentWeatherModel} = require("../Models/Model")
 
 const getUser = (request,response) => {
     try {
@@ -86,4 +87,19 @@ const deleteUser = (request,response) => {
         });
     }
 }
-    module.exports = {getUser,addUser,editUser,deleteUser};
+const currentWeather = async (request,response) => {
+    try {
+        const params = request.query;
+        const data = await currentWeatherModel();
+        response.status(200).json(data);
+    } catch (error) {
+        console.log(error.message);
+        response.status(400).json({
+            total: 0,
+            data,
+            status:400,
+            message: error.message
+        });
+    }
+}
+    module.exports = {getUser,addUser,editUser,deleteUser,currentWeather};
