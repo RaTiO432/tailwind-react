@@ -6,6 +6,7 @@ const os = require("os");
 const browser = require("browser-detect");
 const router = require("./Routes/routes");
 const cors = require("cors");
+const RocketsRouter = require("./Routes/RocketsRoutes");
 
 const app = express();
 app.use(express.json());
@@ -15,6 +16,7 @@ const port = 8082 || process.env.port;
 
 
 app.use(router);
+app.use("/rockets",RocketsRouter);
 
 
 app.get("/methods", (request, response) => {
