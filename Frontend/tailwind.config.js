@@ -22,6 +22,7 @@ module.exports = {
       "black": "#000",
       "red":"#FF0000",
       "amber-600":"#d97706",
+      "lightgreen":"#a0dbba"
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
@@ -47,7 +48,9 @@ module.exports = {
   
   width: {
     "50rem": "50rem",
+    "40rem": "40rem",
     "70%": "70%",
+    "100%": "100%",
     "28rem": "28rem",
     "64rem": "64rem",
   },

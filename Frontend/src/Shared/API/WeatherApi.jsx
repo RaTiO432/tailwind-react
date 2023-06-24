@@ -25,4 +25,16 @@ export const getWeatherDayForecast = async(CityName) =>{
     }
        
     };
+    export const getRockets = async() =>{
+        try {
+             const url = localURL+`rockets/rockets`
+            const WeatherFetch = await fetch(url);
+            const WeatherData = await WeatherFetch.json();
+            return WeatherData;
+        } catch (error) {
+            console.error(error.message)
+            return error;
+        }
+           
+        };
     

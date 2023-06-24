@@ -2,6 +2,7 @@ import {RxCounterClockwiseClock} from "react-icons/rx"
 import {DiReact} from "react-icons/di"
 import {BiBody} from "react-icons/bi"
 import {TiWeatherCloudy} from "react-icons/ti"
+import {BsRocket} from "react-icons/bs"
 export const navbar =[
     {
         route:"/",
@@ -22,6 +23,11 @@ export const navbar =[
         route:"/weather",
         name: "Weather Application",
         icons: <TiWeatherCloudy/>,
+    },
+    {
+        route:"/spacex",
+        name: "spacex",
+        icons: <BsRocket/>,
     },
     
 ]
