@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsRocketTakeoff } from "react-icons/bs";
+import {FaWikipediaW} from "react-icons/fa"
+import { useNavigate } from "react-router-dom";
 const RocketDetails = ({
   id,
   desc = "",
@@ -23,6 +25,15 @@ const RocketDetails = ({
       setCustomActiveClass("bg-orange ");
     }
   };
+ const navigate = useNavigate();
+
+  const rocketHandler =()=>{
+    console.log(rocketId);
+    navigate("/rocket/" + rocketId);
+  }
+
+
+
   useEffect(()=>{
     setActiveClass();
   });
@@ -30,6 +41,7 @@ const RocketDetails = ({
     <div>
       
       <div className="grid grid-cols-1 gap-4 my-1rem" id="grid">
+      
         <div className={"card w-40rem shadow-lg " + customActiveClass}>
           <figure>
             <img src={flickrImages[0]} alt="rockets" />
@@ -61,8 +73,9 @@ const RocketDetails = ({
             </div>
             <div className="card-actions justify-stretch w-100%">
            <div className="flex justify-between items-center space-x-3 w-100%">
-           <p><a href={wiki} target="_blank" rel="noreferrer">{wiki}</a></p>
-              <button className="btn btn-primary">
+           <p><a href={wiki} target="_blank" rel="noreferrer">
+           <FaWikipediaW className="text-xl"/></a></p>
+              <button className="btn btn-primary" onClick={rocketHandler}>
                 <BsRocketTakeoff />
               </button>
            </div>

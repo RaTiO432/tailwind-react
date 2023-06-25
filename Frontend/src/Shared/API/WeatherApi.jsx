@@ -37,4 +37,18 @@ export const getWeatherDayForecast = async(CityName) =>{
         }
            
         };
+
+
+        export const getRocketServices = async(rocketId) =>{
+            try {
+                 const url = localURL+`rockets/rockets/${rocketId}`
+                const WeatherFetch = await fetch(url);
+                const WeatherData = await WeatherFetch.json();
+                return WeatherData;
+            } catch (error) {
+                console.error(error.message)
+                return error;
+            }
+               
+            };
     
